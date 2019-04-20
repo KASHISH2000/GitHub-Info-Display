@@ -28,6 +28,7 @@ $(function () {
             
         }
     $('#show').click(function () {
+        $('#para').show()
         $('#propic').show()
         var user = $('#uname').val();
         namecall(user)

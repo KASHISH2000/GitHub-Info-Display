@@ -4,7 +4,7 @@ $(function () {
             type:'GET',
             url:'https://api.github.com/users/'+name,
         }).done(function(data){
-            $('#name').val(data.name)
+            $('#para').html('<b>'+data.name+'</b>')
             $('#propic').html('<img src="'+data.avatar_url+'"/>')
         })
     }
@@ -38,6 +38,7 @@ $(function () {
         var kname=e.target.innerHTML;
         $('#unames').empty();
         callajax(kname)
+        namecall(kname)
     })
     $('#uname').focus(function () {
         $('#unames').empty();
